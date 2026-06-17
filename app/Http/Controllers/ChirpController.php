@@ -15,6 +15,8 @@ class ChirpController extends Controller
         ->latest()
         ->take(50)
         ->get();
+
+        return view('home',compact('chirps'));
     }
 
     /**
