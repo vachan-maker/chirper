@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Chirp extends Model
+class Chirps extends Model
 {
     protected $fillable = [
-        'messages'
+        'message'
     ];
 
     public function user():BelongsTo {

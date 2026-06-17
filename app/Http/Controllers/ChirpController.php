@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chirps;
 use Illuminate\Http\Request;
-use App\Models\Chirp;
 class ChirpController extends Controller
 {
     /**
@@ -11,7 +11,7 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        $chirps = Chirp::with('user')
+        $chirps = Chirps::with('user')
         ->latest()
         ->take(50)
         ->get();
@@ -37,7 +37,7 @@ class ChirpController extends Controller
         ]
         );
 
-        Chirp::create(
+        Chirps::create(
             [
                 'message' => $validate['message'],
                 'user_id' => null
