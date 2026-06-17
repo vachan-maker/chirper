@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chirps extends Model
 {
-    //
+    protected $fillable = [
+        'messages'
+    ];
 }
